@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <com.xiaoyu.apptoolbar.AppToolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_blue_light"
+        app:navigationIcon="@drawable/ic_back"
+        app:subtitle="这是一个子标题"
+        app:subtitleTextColor="@android:color/white"
+        app:title="这是一个大标题"
+        app:isReLayoutTitle="true"
+        app:titleTextColor="@android:color/white" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:navigationIcon="@drawable/ic_back"
+        app:subtitle="这是一个子标题"
+        app:title="这是一个大标题" />
+</androidx.appcompat.widget.LinearLayoutCompat>

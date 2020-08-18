@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="AppToolbar">
+        <!--是否对title重新布局，默认值true-->
+        <attr name="isReLayoutTitle" format="boolean" />
+    </declare-styleable>
+</resources>

@@ -1,0 +1,3 @@
+include ':apptoolbar'
+include ':app'
+rootProject.name = "AppToolBar"
