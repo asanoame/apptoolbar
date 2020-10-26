@@ -1,6 +1,7 @@
 package com.xiaoyu.apptoolbar
 
 import android.content.Context
+import android.graphics.drawable.Drawable
 import android.util.AttributeSet
 import android.view.View
 import android.widget.TextView
@@ -43,10 +44,26 @@ class AppToolbar : Toolbar {
         if (!isReLayoutTitle) return
         val parentMidWidth = measuredWidth / 2
         val parentMidHeight = measuredHeight / 2
-        val titleTextView = getTitleTextView()
+        val titleTextView = getTitleView()
         val subTitleView = getSubTitleView()
         layoutTitleView(titleTextView, subTitleView, parentMidWidth, parentMidHeight)
         layoutSubTitleView(titleTextView, subTitleView, parentMidWidth, parentMidHeight)
+    }
+
+    /**
+     * 2020/10/26 add
+     *给Title 设置Drawable
+     */
+    fun setTitleDrawables(left: Drawable?, right: Drawable?) {
+        getTitleView()!!.setCompoundDrawables(left, null, right, null)
+    }
+
+    /**
+     * 2020/10/26 add
+     * 给SubTitle 设置Drawable
+     */
+    fun setSubTitleDrawables(left: Drawable?, right: Drawable?) {
+        getSubTitleView()!!.setCompoundDrawables(left, null, right, null)
     }
 
     /**
@@ -91,7 +108,7 @@ class AppToolbar : Toolbar {
         subTitleView.layout(left, top, right, bottom)
     }
 
-    private fun getTitleTextView(): TextView? {
+    private fun getTitleView(): TextView? {
         if (mTitleTextView == null) {
             mTitleTextView = getSuperView(TITLE_VIEW_FILED_NAME)
         }

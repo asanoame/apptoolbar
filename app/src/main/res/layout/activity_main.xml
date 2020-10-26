@@ -8,15 +8,13 @@
     tools:context=".MainActivity">
 
     <com.xiaoyu.apptoolbar.AppToolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/holo_blue_light"
         app:navigationIcon="@drawable/ic_back"
         app:subtitle="这是一个子标题"
-        app:subtitleTextColor="@android:color/white"
         app:title="这是一个大标题"
-        app:isReLayoutTitle="true"
-        app:titleTextColor="@android:color/white" />
+        app:isReLayoutTitle="true" />
 
     <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
